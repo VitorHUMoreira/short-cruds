@@ -35,6 +35,7 @@ a:hover {
 
 .nav {
   background-color: var(--light-blue);
+  margin-bottom: 20px;
 }
 
 .brand {
@@ -72,6 +73,7 @@ a:hover {
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top: 20px;
 }
 
 .footer-h5 {
@@ -170,4 +172,36 @@ a:hover {
 .slideshow:hover .tooltip::before {
   background: #d89906;
   color: var(--white);
+}
+
+.button {
+  background-color: var(--light-grey);
+  border: 1px solid var(--dark-blue);
+  border-radius: 4px;
+  box-shadow: var(--dark-grey) 4px 4px 0 0, var(--medium-grey) 4px 4px 0 1px;
+  color: var(--dark-blue);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 32px;
+}
+
+.button:hover {
+  text-decoration: none;
+  background-color: #f1f1f1;
+  border-color: var(--black);
+}
+
+.button:active {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px inset;
+  outline: none;
+}
+
+.button:not([disabled]):active {
+  box-shadow: var(--dark-grey) 2px 2px 0 0, var(--medium-grey) 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+  background-color: var(--white);
+  border-color: var(--black);
 }
