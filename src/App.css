@@ -28,6 +28,38 @@ a:hover {
   color: black;
 }
 
+.button {
+  background-color: var(--light-grey);
+  border: 1px solid var(--dark-blue);
+  border-radius: 4px;
+  box-shadow: var(--dark-grey) 4px 4px 0 0, var(--medium-grey) 4px 4px 0 1px;
+  color: var(--dark-blue);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 32px;
+}
+
+.button:hover {
+  text-decoration: none;
+  background-color: #f1f1f1;
+  border-color: var(--black);
+}
+
+.button:active {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px inset;
+  outline: none;
+}
+
+.button:not([disabled]):active {
+  box-shadow: var(--dark-grey) 2px 2px 0 0, var(--medium-grey) 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+  background-color: var(--white);
+  border-color: var(--black);
+}
+
 .App {
   text-align: center;
   font-family: "Source Code Pro";
@@ -38,6 +70,14 @@ a:hover {
   margin-bottom: 20px;
 }
 
+.hamburg-hr {
+  margin: 0;
+}
+
+.hamburg-hr {
+  margin-top: 8px;
+}
+
 .brand {
   color: var(--dark-blue);
   text-shadow: 2px 2px 2px var(--dark-grey);
@@ -45,6 +85,10 @@ a:hover {
 
 .brand:hover {
   color: var(--light-grey);
+}
+
+.brand:active {
+  font-size: 19px;
 }
 
 .hamburg {
@@ -61,6 +105,11 @@ a:hover {
 
 .hamburg-collapse-item:hover {
   color: var(--light-grey);
+}
+
+.hamburg-collapse-item:active {
+  font-size: 15px;
+  color: var(--black);
 }
 
 .footer {
@@ -174,34 +223,32 @@ a:hover {
   color: var(--white);
 }
 
-.button {
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 70vh;
+}
+
+.btn-menu {
+  min-width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  padding: 12px 32px;
   background-color: var(--light-grey);
   border: 1px solid var(--dark-blue);
   border-radius: 4px;
-  box-shadow: var(--dark-grey) 4px 4px 0 0, var(--medium-grey) 4px 4px 0 1px;
+  box-shadow: 0px 0px 4px var(--black);
+  text-align: left;
   color: var(--dark-blue);
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "Source Code Pro", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 12px 32px;
-}
-
-.button:hover {
-  text-decoration: none;
-  background-color: #f1f1f1;
-  border-color: var(--black);
-}
-
-.button:active {
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px inset;
-  outline: none;
-}
-
-.button:not([disabled]):active {
-  box-shadow: var(--dark-grey) 2px 2px 0 0, var(--medium-grey) 2px 2px 0 1px;
-  transform: translate(2px, 2px);
-  background-color: var(--white);
-  border-color: var(--black);
+  text-shadow: 0px 0px 1px var(--medium-grey);
+  line-height: 2;
+  list-style: disc;
+  margin-bottom: 12px;
 }

@@ -19,21 +19,26 @@ function NavBar() {
           id="basic-navbar-nav"
         >
           <Nav className="me-auto">
+            <hr className="hamburg-hr" />
             <Link className="nav-link hamburg-collapse-item" to="/">
               Menu
             </Link>
+            <hr className="hamburg-hr" />
 
             <Link className="nav-link hamburg-collapse-item" to="/play">
               Jogar
             </Link>
+            <hr className="hamburg-hr" />
 
             <Link className="nav-link hamburg-collapse-item" to="/configs">
               Configurações
             </Link>
+            <hr className="hamburg-hr" />
 
             <Link className="nav-link hamburg-collapse-item" to="/about">
               Sobre
             </Link>
+            <hr className="hamburg-hr" />
           </Nav>
         </Navbar.Collapse>
       </Container>
