@@ -6,7 +6,7 @@ import "../../App.css";
 
 function NavBar() {
   return (
-    <Navbar expand="lg" className="nav">
+    <Navbar expand="lg" className="nav shadow-sm">
       <Container>
         <Navbar.Brand>
           <Link to="/" className="text-decoration-none brand">

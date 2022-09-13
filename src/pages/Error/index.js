@@ -15,7 +15,9 @@ function Error() {
         </p>
         <hr />
         <Link to="/">
-          <button className="button">MENU</button>
+          <button className="button">
+            <i className="fa-solid fa-bars me-2"></i>MENU
+          </button>
         </Link>
       </Alert>
     </div>

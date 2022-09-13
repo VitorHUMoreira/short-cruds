@@ -28,6 +28,12 @@ a:hover {
   color: black;
 }
 
+.App {
+  text-align: center;
+  font-family: "Source Code Pro";
+  font-size: 16px;
+}
+
 .button {
   background-color: var(--light-grey);
   border: 1px solid var(--dark-blue);
@@ -40,6 +46,8 @@ a:hover {
   font-size: 1rem;
   font-weight: 700;
   padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
 }
 
 .button:hover {
@@ -60,11 +68,6 @@ a:hover {
   border-color: var(--black);
 }
 
-.App {
-  text-align: center;
-  font-family: "Source Code Pro";
-}
-
 .nav {
   background-color: var(--light-blue);
   margin-bottom: 20px;
@@ -80,11 +83,12 @@ a:hover {
 
 .brand {
   color: var(--dark-blue);
-  text-shadow: 2px 2px 2px var(--dark-grey);
+  text-shadow: 1px 1px 2px var(--dark-grey);
+  margin-right: 32px;
 }
 
 .brand:hover {
-  color: var(--light-grey);
+  color: var(--dark-grey);
 }
 
 .brand:active {
@@ -96,15 +100,16 @@ a:hover {
 }
 
 .hamburg-collapse-items {
-  text-shadow: 2px 2px 2px var(--dark-grey);
+  text-shadow: 1px 1px 2px var(--dark-grey);
 }
 
 .hamburg-collapse-item {
   color: var(--dark-blue);
+  margin-right: 16px;
 }
 
 .hamburg-collapse-item:hover {
-  color: var(--light-grey);
+  color: var(--dark-grey);
 }
 
 .hamburg-collapse-item:active {
@@ -251,4 +256,28 @@ a:hover {
   line-height: 2;
   list-style: disc;
   margin-bottom: 12px;
+}
+
+.btns-config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.container-config-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+@media (max-width: 460px) {
+  .App {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
 }

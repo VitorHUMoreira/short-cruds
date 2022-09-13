@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div className="container-xxl">
-      <ul class="about-content">
+      <ul className="about-content">
         <li>
           Jogo desenvolvido para o #2 Projeto do bootcamp de Web Development na
           Ironhack São Paulo, turma #85WDFT.
@@ -17,7 +17,9 @@ function About() {
       </ul>
 
       <Link to="/">
-        <button class="button">MENU</button>
+        <button className="button">
+          <i className="fa-solid fa-bars me-2"></i>MENU
+        </button>
       </Link>
     </div>
   );
