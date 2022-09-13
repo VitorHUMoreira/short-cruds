@@ -13,9 +13,13 @@
   --wrong: #ff0421;
 }
 
-ul {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
   list-style: none;
 }
 
@@ -70,15 +74,11 @@ a:hover {
 
 .nav {
   background-color: var(--light-blue);
-  margin-bottom: 20px;
+  min-height: 8vh;
 }
 
 .hamburg-hr {
-  margin: 0;
-}
-
-.hamburg-hr {
-  margin-top: 8px;
+  margin: 2px;
 }
 
 .brand {
@@ -118,21 +118,21 @@ a:hover {
 }
 
 .footer {
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
   background-color: var(--dark-blue);
   color: white;
   text-align: center;
   font-size: small;
   letter-spacing: 2px;
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  margin-top: 20px;
 }
 
 .footer-h5 {
   font-size: 12px;
-  margin: 10px 0px;
 }
 
 .footer-portfolio {
@@ -147,7 +147,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .icon {
@@ -155,7 +156,7 @@ a:hover {
   background: var(--light-grey);
   border-radius: 50%;
   padding: 14px 14px 12.5px 15.5px;
-  margin: 12px 12px 0 12px;
+  margin: 6px 12px 0 12px;
   width: 16px;
   height: 16px;
   font-size: 16px;
@@ -234,7 +235,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  height: 70vh;
 }
 
 .btn-menu {
@@ -255,7 +255,6 @@ a:hover {
   text-shadow: 0px 0px 1px var(--medium-grey);
   line-height: 2;
   list-style: disc;
-  margin-bottom: 12px;
 }
 
 .btns-config {
@@ -270,6 +269,68 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: var(--grey);
+  color: var(--dark-blue);
+}
+
+.container-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  background-color: whitesmoke;
+  border: 1px solid var(--dark-blue);
+  border-radius: 4px;
+  color: var(--dark-blue);
+  padding: 16px 24px;
+  width: 90%;
+  position: relative;
+}
+
+.container-game-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.lifes-img {
+  position: absolute;
+  left: 39px;
+  top: 12px;
+}
+
+.lifes {
+  font-weight: 700;
+  color: var(--black);
+  font-size: 1.25rem;
+  text-shadow: 0px 0px 1px var(--dark-blue);
+}
+
+.clock-img {
+  position: absolute;
+  right: 44px;
+  top: 7px;
+}
+
+.time {
+  font-weight: 700;
+  color: var(--black);
+  font-size: 1.25rem;
+  text-shadow: 0px 0px 1px var(--dark-blue);
 }
 
 @media (max-width: 460px) {

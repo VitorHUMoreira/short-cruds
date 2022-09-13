@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Error() {
   return (
-    <div className="container-xxl">
+    <div className="body">
       <Alert className="teste" variant="danger">
         <img src={img404} width={250} alt="404" />
         <Alert.Heading>Opa, página não encontrada !!!</Alert.Heading>

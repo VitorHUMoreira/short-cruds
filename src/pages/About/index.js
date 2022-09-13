@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="container-xxl">
+    <div className="body">
+      <h2 className="mb-3">
+        <i className="fa-solid fa-circle-info me-2"></i>SOBRE
+      </h2>
       <ul className="about-content">
         <li>
           Jogo desenvolvido para o #2 Projeto do bootcamp de Web Development na

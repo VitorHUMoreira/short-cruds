@@ -2,15 +2,10 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="container-xxl menu">
-      <Link to="/play">
-        <button className="button btn-menu">
-          <i className="fa-solid fa-play me-2"></i>JOGAR
-        </button>
-      </Link>
+    <div className="menu body">
       <Link to="/configs">
         <button className="button btn-menu">
-          <i className="fa-solid fa-gear me-2"></i>CONFIGURAÇÕES
+          <i className="fa-solid fa-play me-2"></i>JOGAR
         </button>
       </Link>
       <Link to="/about">

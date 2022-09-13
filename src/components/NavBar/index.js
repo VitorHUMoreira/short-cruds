@@ -21,22 +21,17 @@ function NavBar() {
           <Nav className="me-auto">
             <hr className="hamburg-hr" />
             <Link className="nav-link hamburg-collapse-item" to="/">
-              Menu
-            </Link>
-            <hr className="hamburg-hr" />
-
-            <Link className="nav-link hamburg-collapse-item" to="/play">
-              Jogar
+              MENU
             </Link>
             <hr className="hamburg-hr" />
 
             <Link className="nav-link hamburg-collapse-item" to="/configs">
-              Configurações
+              JOGAR
             </Link>
             <hr className="hamburg-hr" />
 
             <Link className="nav-link hamburg-collapse-item" to="/about">
-              Sobre
+              SOBRE
             </Link>
             <hr className="hamburg-hr" />
           </Nav>
