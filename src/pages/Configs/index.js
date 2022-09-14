@@ -57,7 +57,10 @@ function Configs() {
               .filter((config) => {
                 return (
                   config.name.toLowerCase().includes(search.toLowerCase()) ||
-                  config.created_by.toLowerCase().includes(search.toLowerCase())
+                  config.created_by
+                    .toLowerCase()
+                    .includes(search.toLowerCase()) ||
+                  config.difficult.toLowerCase().includes(search.toLowerCase())
                 );
               })
               .map((config) => {

@@ -8,6 +8,10 @@ function ConfigCard({ config }) {
         <Card.Header>{config.name}</Card.Header>
         <Card.Body>
           <Card.Text>{config.description}</Card.Text>
+          <Card.Text>
+            Dificuldade:{" "}
+            <span className={`${config.difficult}`}>{config.difficult}</span>
+          </Card.Text>
           <div className="btns-config">
             <Link to={`/play/${config._id}`}>
               <button className="button">
@@ -22,8 +26,7 @@ function ConfigCard({ config }) {
           </div>
         </Card.Body>
         <Card.Footer className="text-muted">
-          <i className="fa-solid fa-user me-2"></i>Criado por:{" "}
-          {config.created_by}
+          <i className="fa-solid fa-user me-2"></i>Autor: {config.author}
         </Card.Footer>
       </Card>
     </>

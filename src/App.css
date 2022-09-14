@@ -307,30 +307,74 @@ a:hover {
   width: 90%;
 }
 
-.lifes-img {
-  position: absolute;
-  left: 39px;
-  top: 12px;
-}
-
-.lifes {
-  font-weight: 700;
-  color: var(--black);
-  font-size: 1.25rem;
-  text-shadow: 0px 0px 1px var(--dark-blue);
-}
-
-.clock-img {
-  position: absolute;
-  right: 44px;
-  top: 7px;
-}
-
+.lifes,
 .time {
   font-weight: 700;
   color: var(--black);
   font-size: 1.25rem;
   text-shadow: 0px 0px 1px var(--dark-blue);
+}
+
+.span-correct {
+  color: var(--correct);
+}
+
+.form-container {
+  font-size: 16px;
+  width: 100%;
+}
+
+.create-inputs {
+  text-align: left;
+}
+
+.btn-plus {
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.text-question {
+  width: 100%;
+}
+
+.btn-trash {
+  border-radius: 50%;
+  padding: 8px;
+  background-color: salmon;
+}
+
+.btn-trash:hover {
+  background-color: lightsalmon;
+}
+
+.Fácil {
+  color: var(--dark-blue);
+  background-color: var(--correct);
+  padding: 4px;
+}
+
+.Médio {
+  color: var(--dark-blue);
+  background-color: darkorange;
+  padding: 4px;
+}
+
+.Difícil {
+  color: var(--dark-blue);
+  background-color: var(--wrong);
+  padding: 4px;
+}
+
+.accordion-container {
+  width: 100%;
+}
+
+.btn-delete {
+  background-color: salmon;
+}
+
+.btn-delete:hover {
+  background-color: lightsalmon;
 }
 
 @media (max-width: 460px) {
