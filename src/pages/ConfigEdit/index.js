@@ -6,7 +6,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 function ConfigEdit() {
   const { configID } = useParams();
   const [config, setConfig] = useState({});
-  const [reload] = useState(false);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -26,7 +25,7 @@ function ConfigEdit() {
     }
 
     fetchConfigs();
-  }, [configID, reload]);
+  }, [configID]);
 
   function handleChange(e) {
     setConfig({ ...config, [e.target.name]: e.target.value });
@@ -34,10 +33,19 @@ function ConfigEdit() {
 
   function handleChangeQuestions(e, index) {
     const clone = { ...config };
+
     if (e.target.name === "question") {
       clone.questions[index].question = e.target.value;
     } else if (e.target.name === "answer") {
       clone.questions[index].answer = e.target.value;
+    } else if (e.target.name === "choice1") {
+      clone.questions[index].choices[0] = e.target.value;
+    } else if (e.target.name === "choice2") {
+      clone.questions[index].choices[1] = e.target.value;
+    } else if (e.target.name === "choice3") {
+      clone.questions[index].choices[2] = e.target.value;
+    } else if (e.target.name === "choice4") {
+      clone.questions[index].choices[3] = e.target.value;
     }
 
     setConfig(clone);
@@ -69,8 +77,6 @@ function ConfigEdit() {
       console.log(error);
     }
   }
-
-  console.log(config);
 
   return (
     <div className="body shadow-sm">
@@ -131,7 +137,10 @@ function ConfigEdit() {
           <Accordion className="accordion-container mb-2">
             {config.questions.map((question, index) => {
               return (
-                <Accordion.Item key={question.question} eventKey={index}>
+                <Accordion.Item
+                  key={Math.random() * 1000 * index}
+                  eventKey={index}
+                >
                   <Accordion.Header>Pergunta #{index + 1}</Accordion.Header>
                   <Accordion.Body>
                     <Form.Group className="create-inputs mb-2">
@@ -146,7 +155,37 @@ function ConfigEdit() {
 
                     <Form.Group className="create-inputs mb-2">
                       <Form.Label htmlFor="choices">Alternativas</Form.Label>
-                      {question.choices.map((choice, index) => {
+
+                      <Form.Control
+                        className="mb-2"
+                        id="choices"
+                        name="choice1"
+                        value={question.choices[0]}
+                        onChange={(e) => handleChangeQuestions(e, index)}
+                      />
+                      <Form.Control
+                        className="mb-2"
+                        id="choices"
+                        name="choice2"
+                        value={question.choices[1]}
+                        onChange={(e) => handleChangeQuestions(e, index)}
+                      />
+                      <Form.Control
+                        className="mb-2"
+                        id="choices"
+                        name="choice3"
+                        value={question.choices[2]}
+                        onChange={(e) => handleChangeQuestions(e, index)}
+                      />
+                      <Form.Control
+                        className="mb-2"
+                        id="choices"
+                        name="choice4"
+                        value={question.choices[3]}
+                        onChange={(e) => handleChangeQuestions(e, index)}
+                      />
+
+                      {/* {question.choices.map((choice, index) => {
                         return (
                           <Form.Control
                             className="mb-2"
@@ -157,7 +196,7 @@ function ConfigEdit() {
                             onChange={handleChange}
                           />
                         );
-                      })}
+                      })} */}
                     </Form.Group>
 
                     <Form.Group className="create-inputs mb-2">

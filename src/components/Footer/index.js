@@ -38,7 +38,7 @@ function Footer() {
         <li className="icon slideshow">
           <span className="tooltip">Slideshow</span>
           <a
-            href="https://www.canva.com/design/DAFKWJTJfSA/OogDAnqZ39Sjm_UGCOmlMw/view?utm_content=DAFKWJTJfSA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#9"
+            href="https://www.canva.com/design/DAFMUYCOY2k/UFHDXeGt0-2oqubJGZevEg/view?utm_content=DAFMUYCOY2k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
             target="_blank"
             rel="noreferrer"
           >

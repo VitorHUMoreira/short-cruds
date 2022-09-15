@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 function Play() {
   const { configID } = useParams();
@@ -45,7 +46,14 @@ function Play() {
           </h6>
 
           <div className="container-game">
-            <h3 className="mt-2">{currentQuestion.question}?</h3>
+            <h3 className="mt-2">
+              <strong>{currentQuestion.question}?</strong>
+            </h3>
+            <ProgressBar
+              now={((round + 1) * 100) / config.questions.length}
+              label={`${round + 1} / ${config.questions.length}`}
+              className="progress"
+            />
             {currentQuestion.choices.map((choice) => {
               return (
                 <button

@@ -84,21 +84,21 @@ function ConfigDetail() {
                   <Accordion.Header>Pergunta #{index + 1}</Accordion.Header>
                   <Accordion.Body>
                     <InputGroup>
-                      <InputGroup.Text className="text-question mb-1">
+                      <InputGroup.Text className="text-question mb-1 overflow">
                         <strong>Pergunta:&nbsp;</strong>
                         {question.question}
                       </InputGroup.Text>
                       {question.choices.map((choice, index) => {
                         return (
                           <InputGroup.Text
-                            className="text-question mb-1"
+                            className="text-question mb-1 overflow"
                             key={choice}
                           >
                             <strong>Alternativa:&nbsp;</strong> {choice}
                           </InputGroup.Text>
                         );
                       })}
-                      <InputGroup.Text className="text-question">
+                      <InputGroup.Text className="text-question overflow">
                         <strong>Resposta:&nbsp;</strong> {question.answer}
                       </InputGroup.Text>
                     </InputGroup>

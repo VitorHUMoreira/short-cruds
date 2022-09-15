@@ -238,10 +238,19 @@ a:hover {
 }
 
 .btn-menu {
-  min-width: 240px;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.overflow {
+  overflow: auto;
+}
+
+.progress {
+  width: 88%;
+  background-color: var(--light-grey);
 }
 
 .about-content {
