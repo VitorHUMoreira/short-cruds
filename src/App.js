@@ -9,6 +9,7 @@ import Play from "./pages/Play";
 import Configs from "./pages/Configs";
 import CreateConfig from "./pages/CreateConfig";
 import ConfigDetail from "./pages/ConfigDetail";
+import ConfigEdit from "./pages/ConfigEdit";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/configs" element={<Configs />} />
 
         <Route path="/configs/:configID" element={<ConfigDetail />} />
+
+        <Route path="/configs/edit/:configID" element={<ConfigEdit />} />
 
         <Route path="/create-config" element={<CreateConfig />} />
 

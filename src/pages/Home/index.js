@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="menu body">
+    <div className="menu body shadow-sm">
       <Link to="/configs">
         <button className="button btn-menu">
           <i className="fa-solid fa-play me-2"></i>JOGAR

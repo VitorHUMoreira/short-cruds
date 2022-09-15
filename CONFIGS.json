@@ -1,0 +1,102 @@
+
+	{
+		"author": "Vitor Hugo",
+		"name": "League of Legends",
+		"description": "Perguntas de LoL para se divertir",
+		"difficult": "Fácil",
+		"questions": [
+			{
+				"question": "Maior campeão de Worlds",
+				"choices": [
+					"SKT",
+					"Fnatic",
+					"G2",
+					"Pain"
+				],
+				"answer": "SKT"
+			},
+			{
+				"question": "Esposa do Lucian",
+				"choices": [
+					"Vayne",
+					"Lux",
+					"Senna",
+					"Soraka"
+				],
+				"answer": "Senna"
+			},
+			{
+				"question": "Maior numero de partidas vencidas em um Worlds por um time brasileiro",
+				"choices": [
+					"0",
+					"1",
+					"2",
+					"3"
+				],
+				"answer": "2"
+			}
+		]
+	}
+
+
+
+
+	{
+		"author": "Doug",
+		"name": "Naruto",
+		"description": "Naruto top",
+		"difficult": "Médio",
+		"questions": [
+			{
+				"question": "Cabelo do naruto é",
+				"choices": [
+					"Amarelo",
+					"Axul",
+					"Preto",
+					"Verde"
+				],
+				"answer": "Amarelo"
+			},
+			{
+				"question": "Itachi é irmão de",
+				"choices": [
+					"Jiraya",
+					"Kakashi",
+					"Madara",
+					"Sasuke"
+				],
+				"answer": "Sasuke"
+			}
+		]
+	}
+
+
+
+	{
+		"author": "Karen",
+		"name": "Matemática",
+		"description": "Só nas continhas",
+		"difficult": "Difícil",
+		"questions": [
+			{
+				"question": "2 + 2",
+				"choices": [
+					"2",
+					"3",
+					"4",
+					"6"
+				],
+				"answer": "4"
+			},
+			{
+				"question": "7 x 7",
+				"choices": [
+					"24",
+					"49",
+					"64",
+					"32"
+				],
+				"answer": "49"
+			}
+		]
+	}

@@ -37,7 +37,7 @@ function Play() {
   return (
     <>
       {!loading && config.questions.length > round && (
-        <div className="body">
+        <div className="body shadow-sm">
           <h6 className="mb-3">
             JOGANDO: <strong>{config.name}</strong>
             <br />
@@ -62,7 +62,7 @@ function Play() {
       )}
 
       {!loading && +config.questions.length === round && (
-        <div className="body">
+        <div className="body shadow-sm">
           <div className="container-game">
             <h3 className="mt-2">FIM DE JOGO</h3>
             <h5>

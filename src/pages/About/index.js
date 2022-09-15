@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="body">
+    <div className="body shadow-sm">
       <h2 className="mb-3">
         <i className="fa-solid fa-circle-info me-2"></i>SOBRE
       </h2>

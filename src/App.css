@@ -348,21 +348,30 @@ a:hover {
 }
 
 .Fácil {
-  color: var(--dark-blue);
+  color: var(--black);
+  font-weight: bold;
   background-color: var(--correct);
-  padding: 4px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-blue);
 }
 
 .Médio {
-  color: var(--dark-blue);
+  color: var(--black);
+  font-weight: bold;
   background-color: darkorange;
-  padding: 4px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-blue);
 }
 
 .Difícil {
-  color: var(--dark-blue);
-  background-color: var(--wrong);
-  padding: 4px;
+  color: var(--black);
+  font-weight: bold;
+  background-color: rgb(240, 60, 60);
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-blue);
 }
 
 .accordion-container {
@@ -377,6 +386,24 @@ a:hover {
   background-color: lightsalmon;
 }
 
+.search-input {
+  min-width: 60vw;
+  max-width: 90vw;
+}
+
+.card-container {
+  min-width: 60vw;
+  max-width: 90vw;
+}
+
+.btn-green {
+  background-color: rgb(79, 243, 79);
+}
+
+.btn-green:hover {
+  background-color: lightgreen;
+}
+
 @media (max-width: 460px) {
   .App {
     font-size: 14px;
@@ -384,5 +411,10 @@ a:hover {
 
   .button {
     font-size: 14px;
+  }
+
+  .search-input {
+    min-width: 40vw;
+    max-width: 90vw;
   }
 }

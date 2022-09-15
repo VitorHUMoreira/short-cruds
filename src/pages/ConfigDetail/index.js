@@ -1,14 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Accordion, Form, InputGroup } from "react-bootstrap";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function ConfigDetail() {
   const { configID } = useParams();
   const [config, setConfig] = useState({});
   const [reload, setReload] = useState(false);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -28,20 +27,8 @@ function ConfigDetail() {
     fetchConfigs();
   }, [configID, reload]);
 
-  async function handleDelete() {
-    try {
-      await axios.delete(
-        `https://ironrest.herokuapp.com/short-cruds/${configID}`
-      );
-
-      navigate("/configs");
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   return (
-    <div className="body">
+    <div className="body shadow-sm">
       <h2 className="mb-3">
         <i className="fa-solid fa-gear me-2"></i>CONFIGURAÇÃO
       </h2>
@@ -53,12 +40,18 @@ function ConfigDetail() {
               <Form.Control
                 id="author"
                 value={config.author}
+                readOnly
                 spellCheck="false"
               />
             </Form.Group>
             <Form.Group className="create-inputs mb-2">
               <Form.Label htmlFor="name">Nome</Form.Label>
-              <Form.Control id="name" value={config.name} spellCheck="false" />
+              <Form.Control
+                id="name"
+                value={config.name}
+                spellCheck="false"
+                readOnly
+              />
             </Form.Group>
 
             <Form.Group className="create-inputs mb-2">
@@ -66,6 +59,7 @@ function ConfigDetail() {
               <Form.Control
                 id="description"
                 value={config.description}
+                readOnly
                 spellCheck="false"
               />
             </Form.Group>
@@ -115,15 +109,20 @@ function ConfigDetail() {
                 <i className="fa-solid fa-play me-2"></i>JOGAR
               </button>
             </Link>
-            <button className="button">
-              <i class="fa-solid fa-pen-to-square me-2"></i>EDITAR
-            </button>
-            <button className="button btn-delete" onClick={handleDelete}>
-              <i class="fa-solid fa-trash me-2"></i>DELETAR
-            </button>
+
+            <Link to={`/configs/edit/${config._id}`}>
+              <button className="button">
+                <i className="fa-solid fa-pen-to-square me-2"></i>EDITAR
+              </button>
+            </Link>
           </div>
         </div>
       )}
+      <Link to={`/configs`}>
+        <button className="button mt-3">
+          <i className="fa-solid fa-arrow-left me-2"></i>VOLTAR
+        </button>
+      </Link>
     </div>
   );
 }

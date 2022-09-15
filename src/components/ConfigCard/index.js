@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ConfigCard({ config }) {
   return (
     <>
-      <Card className="text-center">
+      <Card className="text-center card-container">
         <Card.Header>{config.name}</Card.Header>
         <Card.Body>
           <Card.Text>{config.description}</Card.Text>
@@ -20,7 +20,7 @@ function ConfigCard({ config }) {
             </Link>
             <Link to={`/configs/${config._id}`}>
               <button className="button">
-                <i className="fa-solid fa-eye me-2"></i>VER CONFIGURAÇÃO
+                <i className="fa-solid fa-eye me-2"></i>DETALHES
               </button>
             </Link>
           </div>

@@ -37,7 +37,7 @@ function CreateConfig() {
   }
 
   return (
-    <div className="body">
+    <div className="body shadow-sm">
       <h2 className="mb-3">
         <i className="fa-solid fa-plus me-2"></i>CRIAR CONFIGURAÇÃO
       </h2>
@@ -82,6 +82,9 @@ function CreateConfig() {
           <Form.Group className="create-inputs mb-2">
             <Form.Label htmlFor="difficult">Dificuldade</Form.Label>
             <Form.Select name="difficult" onChange={handleChange} required>
+              <option value="" selected disabled hidden>
+                Selecione uma dificuldade
+              </option>
               <option value="Fácil">Fácil</option>
               <option value="Médio">Médio</option>
               <option value="Difícil">Difícil</option>
@@ -132,7 +135,11 @@ function CreateConfig() {
             })}
           </Accordion>
 
-          <button className="button mt-4" type="submit" onClick={handleSubmit}>
+          <button
+            className="button mt-4 btn-green"
+            type="submit"
+            onClick={handleSubmit}
+          >
             <i className="fa-solid fa-right-to-bracket me-2"></i>CRIAR
           </button>
         </Form>
