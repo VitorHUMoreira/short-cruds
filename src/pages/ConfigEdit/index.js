@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Accordion, Form, InputGroup } from "react-bootstrap";
+import { Accordion, Form } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 function ConfigEdit() {
   const { configID } = useParams();
   const [config, setConfig] = useState({});
-  const [reload, setReload] = useState(false);
+  const [reload] = useState(false);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -32,11 +32,26 @@ function ConfigEdit() {
     setConfig({ ...config, [e.target.name]: e.target.value });
   }
 
+  function handleChangeQuestions(e, index) {
+    const clone = { ...config };
+    if (e.target.name === "question") {
+      clone.questions[index].question = e.target.value;
+    } else if (e.target.name === "answer") {
+      clone.questions[index].answer = e.target.value;
+    }
+
+    setConfig(clone);
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      await axios.post("https://ironrest.herokuapp.com/short-cruds", config);
+      delete config._id;
+      await axios.put(
+        `https://ironrest.herokuapp.com/short-cruds/${configID}`,
+        config
+      );
       navigate("/configs");
     } catch (error) {
       console.log(error);
@@ -55,6 +70,8 @@ function ConfigEdit() {
     }
   }
 
+  console.log(config);
+
   return (
     <div className="body shadow-sm">
       <h2 className="mb-3">
@@ -67,6 +84,7 @@ function ConfigEdit() {
               <Form.Label htmlFor="author">Autor</Form.Label>
               <Form.Control
                 id="author"
+                name="author"
                 onChange={handleChange}
                 value={config.author}
                 spellCheck="false"
@@ -76,6 +94,7 @@ function ConfigEdit() {
               <Form.Label htmlFor="name">Nome</Form.Label>
               <Form.Control
                 id="name"
+                name="name"
                 value={config.name}
                 spellCheck="false"
                 onChange={handleChange}
@@ -86,6 +105,7 @@ function ConfigEdit() {
               <Form.Label htmlFor="description">Descrição</Form.Label>
               <Form.Control
                 id="description"
+                name="description"
                 value={config.description}
                 onChange={handleChange}
               />
@@ -95,6 +115,7 @@ function ConfigEdit() {
               <Form.Label htmlFor="difficult">Dificuldade</Form.Label>
               <Form.Select
                 id="difficult"
+                name="difficult"
                 value={config.difficult}
                 onChange={handleChange}
               >
@@ -113,24 +134,53 @@ function ConfigEdit() {
                 <Accordion.Item key={question.question} eventKey={index}>
                   <Accordion.Header>Pergunta #{index + 1}</Accordion.Header>
                   <Accordion.Body>
-                    <InputGroup>
-                      <InputGroup.Text className="text-question mb-1">
-                        Pergunta: {question.question}
-                      </InputGroup.Text>
+                    <Form.Group className="create-inputs mb-2">
+                      <Form.Label htmlFor="question">Pergunta</Form.Label>
+                      <Form.Control
+                        id="question"
+                        name="question"
+                        value={question.question}
+                        onChange={(e) => handleChangeQuestions(e, index)}
+                      />
+                    </Form.Group>
+
+                    <Form.Group className="create-inputs mb-2">
+                      <Form.Label htmlFor="choices">Alternativas</Form.Label>
                       {question.choices.map((choice, index) => {
                         return (
-                          <InputGroup.Text
-                            className="text-question mb-1"
+                          <Form.Control
+                            className="mb-2"
                             key={choice}
-                          >
-                            {index + 1}ª alternativa: {choice}
-                          </InputGroup.Text>
+                            id="choices"
+                            name="choices"
+                            value={choice}
+                            onChange={handleChange}
+                          />
                         );
                       })}
-                      <InputGroup.Text className="text-question">
-                        Resposta: {question.answer}
-                      </InputGroup.Text>
-                    </InputGroup>
+                    </Form.Group>
+
+                    <Form.Group className="create-inputs mb-2">
+                      <Form.Label htmlFor="answer">Resposta</Form.Label>
+                      <Form.Select
+                        id="answer"
+                        name="answer"
+                        onChange={(e) => handleChangeQuestions(e, index)}
+                      >
+                        <option value={question.choices[0]}>
+                          {question.choices[0]}
+                        </option>
+                        <option value={question.choices[1]}>
+                          {question.choices[1]}
+                        </option>
+                        <option value={question.choices[2]}>
+                          {question.choices[2]}
+                        </option>
+                        <option value={question.choices[3]}>
+                          {question.choices[3]}
+                        </option>
+                      </Form.Select>
+                    </Form.Group>
                   </Accordion.Body>
                 </Accordion.Item>
               );

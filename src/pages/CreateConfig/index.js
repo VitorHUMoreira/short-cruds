@@ -81,8 +81,13 @@ function CreateConfig() {
 
           <Form.Group className="create-inputs mb-2">
             <Form.Label htmlFor="difficult">Dificuldade</Form.Label>
-            <Form.Select name="difficult" onChange={handleChange} required>
-              <option value="" selected disabled hidden>
+            <Form.Select
+              name="difficult"
+              onChange={handleChange}
+              defaultValue=""
+              required
+            >
+              <option value="" disabled hidden>
                 Selecione uma dificuldade
               </option>
               <option value="Fácil">Fácil</option>

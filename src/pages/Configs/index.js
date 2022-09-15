@@ -56,7 +56,7 @@ function Configs() {
             </Alert>
           )}
 
-          {configs.length && (
+          {configs.length !== 0 && (
             <>
               <Link to="/create-config">
                 <button className="button mb-4">

@@ -63,7 +63,7 @@ function Questions({ form, setForm }) {
           name="choice1"
           value={choice1}
           onChange={(e) => setChoice1(e.target.value)}
-          placeholder="Texto da 1ª alternativa"
+          placeholder="Texto da alternativa"
           required
         />
         <Form.Control
@@ -72,7 +72,7 @@ function Questions({ form, setForm }) {
           name="choice2"
           value={choice2}
           onChange={(e) => setChoice2(e.target.value)}
-          placeholder="Texto da 2ª alternativa"
+          placeholder="Texto da alternativa"
           required
         />
         <Form.Control
@@ -81,7 +81,7 @@ function Questions({ form, setForm }) {
           name="choice3"
           value={choice3}
           onChange={(e) => setChoice3(e.target.value)}
-          placeholder="Texto da 3ª alternativa"
+          placeholder="Texto da alternativa"
           required
         />
         <Form.Control
@@ -89,7 +89,7 @@ function Questions({ form, setForm }) {
           name="choice4"
           value={choice4}
           onChange={(e) => setChoice4(e.target.value)}
-          placeholder="Texto da 4ª alternativa"
+          placeholder="Texto da alternativa"
           required
         />
       </Form.Group>

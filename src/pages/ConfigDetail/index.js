@@ -41,6 +41,7 @@ function ConfigDetail() {
                 id="author"
                 value={config.author}
                 readOnly
+                disabled
                 spellCheck="false"
               />
             </Form.Group>
@@ -51,6 +52,7 @@ function ConfigDetail() {
                 value={config.name}
                 spellCheck="false"
                 readOnly
+                disabled
               />
             </Form.Group>
 
@@ -61,6 +63,7 @@ function ConfigDetail() {
                 value={config.description}
                 readOnly
                 spellCheck="false"
+                disabled
               />
             </Form.Group>
 
@@ -82,7 +85,8 @@ function ConfigDetail() {
                   <Accordion.Body>
                     <InputGroup>
                       <InputGroup.Text className="text-question mb-1">
-                        Pergunta: {question.question}
+                        <strong>Pergunta:&nbsp;</strong>
+                        {question.question}
                       </InputGroup.Text>
                       {question.choices.map((choice, index) => {
                         return (
@@ -90,12 +94,12 @@ function ConfigDetail() {
                             className="text-question mb-1"
                             key={choice}
                           >
-                            {index + 1}ª alternativa: {choice}
+                            <strong>Alternativa:&nbsp;</strong> {choice}
                           </InputGroup.Text>
                         );
                       })}
                       <InputGroup.Text className="text-question">
-                        Resposta: {question.answer}
+                        <strong>Resposta:&nbsp;</strong> {question.answer}
                       </InputGroup.Text>
                     </InputGroup>
                   </Accordion.Body>
