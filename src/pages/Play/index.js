@@ -38,6 +38,9 @@ function Play() {
   }, [configID, round]);
 
   function handleChoice(e) {
+    e.target.disabled = true;
+    const correctTint = correctRef.current;
+    correctTint.disabled = true;
     if (e.target.innerText === config.questions[round].answer) {
       e.target.classList.add("correct-answer");
       audioCorrect.play();
@@ -49,7 +52,6 @@ function Play() {
     } else {
       e.target.classList.add("wrong-answer");
       audioWrong.play();
-      const correctTint = correctRef.current;
       correctTint.classList.add("correct-answer");
       setTimeout(() => {
         setRound(round + 1);

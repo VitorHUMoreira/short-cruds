@@ -184,19 +184,6 @@ function ConfigEdit() {
                         value={question.choices[3]}
                         onChange={(e) => handleChangeQuestions(e, index)}
                       />
-
-                      {/* {question.choices.map((choice, index) => {
-                        return (
-                          <Form.Control
-                            className="mb-2"
-                            key={choice}
-                            id="choices"
-                            name="choices"
-                            value={choice}
-                            onChange={handleChange}
-                          />
-                        );
-                      })} */}
                     </Form.Group>
 
                     <Form.Group className="create-inputs mb-2">
@@ -204,6 +191,7 @@ function ConfigEdit() {
                       <Form.Select
                         id="answer"
                         name="answer"
+                        defaultValue={question.answer}
                         onChange={(e) => handleChangeQuestions(e, index)}
                       >
                         <option value={question.choices[0]}>
