@@ -27,7 +27,7 @@ function Play() {
     }
 
     fetchConfigs();
-  }, []);
+  }, [configID, round]);
 
   function handleChoice(e) {
     setRound(round + 1);

@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 function ConfigDetail() {
   const { configID } = useParams();
   const [config, setConfig] = useState({});
-  const [reload, setReload] = useState(false);
+  const [reload] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

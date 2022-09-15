@@ -71,21 +71,23 @@ function Configs() {
                 onChange={handleSearch}
                 placeholder="Procure uma configuração por nome ou autor"
               />
+
+              <div className="container-config-cards">
+                {configs
+                  .filter((config) => {
+                    return (
+                      config.name
+                        .toLowerCase()
+                        .includes(search.toLowerCase()) ||
+                      config.author.toLowerCase().includes(search.toLowerCase())
+                    );
+                  })
+                  .map((config) => {
+                    return <ConfigCard key={config._id} config={config} />;
+                  })}
+              </div>
             </>
           )}
-
-          <div className="container-config-cards">
-            {configs
-              .filter((config) => {
-                return (
-                  config.name.toLowerCase().includes(search.toLowerCase()) ||
-                  config.author.toLowerCase().includes(search.toLowerCase())
-                );
-              })
-              .map((config) => {
-                return <ConfigCard key={config._id} config={config} />;
-              })}
-          </div>
         </>
       )}
     </div>
