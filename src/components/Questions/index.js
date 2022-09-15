@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Form } from "react-bootstrap";
 
 function Questions({ form, setForm }) {
@@ -7,6 +7,8 @@ function Questions({ form, setForm }) {
     choices: [],
     answer: "",
   });
+
+  const questionRef = useRef();
 
   const [choice1, setChoice1] = useState("");
   const [choice2, setChoice2] = useState("");
@@ -19,6 +21,8 @@ function Questions({ form, setForm }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    questionRef.current.focus();
+
     try {
       const cloneQuestion = { ...formQuestion };
       cloneQuestion.choices = [choice1, choice2, choice3, choice4];
@@ -46,6 +50,7 @@ function Questions({ form, setForm }) {
       <Form.Group className="create-inputs mb-2">
         <Form.Label htmlFor="question">Pergunta</Form.Label>
         <Form.Control
+          ref={questionRef}
           id="question"
           name="question"
           value={formQuestion.question}

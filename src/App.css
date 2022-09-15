@@ -248,9 +248,22 @@ a:hover {
   overflow: auto;
 }
 
+.question-h3 {
+  text-shadow: 1px 1px 2px var(--light-grey);
+}
+
 .progress {
   width: 88%;
   background-color: var(--light-grey);
+  text-shadow: 1px 1px 2px var(--dark-blue);
+}
+
+.correct-answer {
+  background-color: var(--correct);
+}
+
+.wrong-answer {
+  background-color: var(--wrong);
 }
 
 .about-content {

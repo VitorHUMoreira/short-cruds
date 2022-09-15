@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Accordion, Form, InputGroup } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Questions from "../../components/Questions";
@@ -12,7 +12,12 @@ function CreateConfig() {
     questions: [],
   });
 
+  const startRef = useRef();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    startRef.current.focus();
+  }, []);
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -46,6 +51,7 @@ function CreateConfig() {
           <Form.Group className="create-inputs mb-2">
             <Form.Label htmlFor="author">Autor</Form.Label>
             <Form.Control
+              ref={startRef}
               id="author"
               name="author"
               value={form.author}
