@@ -94,6 +94,7 @@ function ConfigEdit() {
                 onChange={handleChange}
                 value={config.author}
                 spellCheck="false"
+                required
               />
             </Form.Group>
             <Form.Group className="create-inputs mb-2">
@@ -104,6 +105,7 @@ function ConfigEdit() {
                 value={config.name}
                 spellCheck="false"
                 onChange={handleChange}
+                required
               />
             </Form.Group>
 
@@ -114,6 +116,7 @@ function ConfigEdit() {
                 name="description"
                 value={config.description}
                 onChange={handleChange}
+                required
               />
             </Form.Group>
 
@@ -124,6 +127,7 @@ function ConfigEdit() {
                 name="difficult"
                 value={config.difficult}
                 onChange={handleChange}
+                required
               >
                 <option value="Fácil">Fácil</option>
                 <option value="Médio">Médio</option>
@@ -215,7 +219,11 @@ function ConfigEdit() {
           </Accordion>
           <div className="btns-config">
             <Link to={`/configs/edit/${config._id}`}>
-              <button className="button btn-green" onClick={handleSubmit}>
+              <button
+                className="button btn-green"
+                type="submit"
+                onClick={handleSubmit}
+              >
                 <i className="fa-solid fa-check me-2"></i>SALVAR
               </button>
             </Link>

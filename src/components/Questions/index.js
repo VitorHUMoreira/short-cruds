@@ -56,7 +56,6 @@ function Questions({ form, setForm }) {
           value={formQuestion.question}
           onChange={handleChange}
           placeholder="Texto da pergunta"
-          required
         />
       </Form.Group>
 
@@ -69,7 +68,6 @@ function Questions({ form, setForm }) {
           value={choice1}
           onChange={(e) => setChoice1(e.target.value)}
           placeholder="Texto da alternativa"
-          required
         />
         <Form.Control
           className="mb-2"
@@ -78,7 +76,6 @@ function Questions({ form, setForm }) {
           value={choice2}
           onChange={(e) => setChoice2(e.target.value)}
           placeholder="Texto da alternativa"
-          required
         />
         <Form.Control
           className="mb-2"
@@ -87,7 +84,6 @@ function Questions({ form, setForm }) {
           value={choice3}
           onChange={(e) => setChoice3(e.target.value)}
           placeholder="Texto da alternativa"
-          required
         />
         <Form.Control
           id="choices"
@@ -95,13 +91,12 @@ function Questions({ form, setForm }) {
           value={choice4}
           onChange={(e) => setChoice4(e.target.value)}
           placeholder="Texto da alternativa"
-          required
         />
       </Form.Group>
 
       <Form.Group className="create-inputs mb-2">
         <Form.Label htmlFor="answer">Resposta</Form.Label>
-        <Form.Select id="answer" name="answer" onChange={handleChange} required>
+        <Form.Select id="answer" name="answer" onChange={handleChange}>
           <option value={choice1}>{choice1}</option>
           <option value={choice2}>{choice2}</option>
           <option value={choice3}>{choice3}</option>

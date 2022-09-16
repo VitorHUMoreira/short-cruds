@@ -47,7 +47,7 @@ function CreateConfig() {
         <i className="fa-solid fa-plus me-2"></i>CRIAR CONFIGURAÇÃO
       </h2>
       <div className="container-game">
-        <Form className="form-container">
+        <Form onSubmit={handleSubmit} className="form-container">
           <Form.Group className="create-inputs mb-2">
             <Form.Label htmlFor="author">Autor</Form.Label>
             <Form.Control
@@ -146,11 +146,7 @@ function CreateConfig() {
             })}
           </Accordion>
 
-          <button
-            className="button mt-4 btn-green"
-            type="submit"
-            onClick={handleSubmit}
-          >
+          <button className="button mt-4 btn-green" type="submit">
             <i className="fa-solid fa-right-to-bracket me-2"></i>CRIAR
           </button>
         </Form>
