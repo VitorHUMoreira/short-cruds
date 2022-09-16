@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Accordion, Form } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function ConfigEdit() {
   const { configID } = useParams();
@@ -61,6 +62,7 @@ function ConfigEdit() {
         config
       );
       navigate("/configs");
+      toast.success("Configuração editada com sucesso!");
     } catch (error) {
       console.log(error);
     }
@@ -71,10 +73,11 @@ function ConfigEdit() {
       await axios.delete(
         `https://ironrest.herokuapp.com/short-cruds/${configID}`
       );
-
       navigate("/configs");
+      toast.success("Configuração deletada com sucesso!");
     } catch (error) {
       console.log(error);
+      toast.error("Ocorreu um erro ao deletar a configuração!");
     }
   }
 

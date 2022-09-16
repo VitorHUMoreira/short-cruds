@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { Accordion, Form, InputGroup } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Questions from "../../components/Questions";
+import toast from "react-hot-toast";
 
 function CreateConfig() {
   const [form, setForm] = useState({
@@ -29,8 +30,10 @@ function CreateConfig() {
     try {
       await axios.post("https://ironrest.herokuapp.com/short-cruds", form);
       navigate("/configs");
+      toast.success("Pergunta adicionada com sucesso!");
     } catch (error) {
       console.log(error);
+      toast.error("Ocorreu um erro ao adicionar a pergunta!");
     }
   }
 

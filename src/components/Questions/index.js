@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Form } from "react-bootstrap";
+import toast from "react-hot-toast";
 
 function Questions({ form, setForm }) {
   const [formQuestion, setFormQuestion] = useState({
@@ -40,8 +41,10 @@ function Questions({ form, setForm }) {
       setChoice2("");
       setChoice3("");
       setChoice4("");
+      toast.success("Configuração criada com sucesso!");
     } catch (error) {
       console.log(error);
+      toast.error("Ocorreu um erro na criação da configuração!");
     }
   }
 

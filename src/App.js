@@ -10,11 +10,13 @@ import Configs from "./pages/Configs";
 import CreateConfig from "./pages/CreateConfig";
 import ConfigDetail from "./pages/ConfigDetail";
 import ConfigEdit from "./pages/ConfigEdit";
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
 
