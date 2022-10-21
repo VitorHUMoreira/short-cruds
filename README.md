@@ -40,7 +40,13 @@ The player can create, view, edit and delete game settings.
 
 ## **Built With**
 
-<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code><code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code><code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"></code><code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code><code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code><code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png"></code><code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
+<p align="center">
+    <img height="40" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="html"> &nbsp
+    <img height="40" src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="css"> &nbsp
+    <img height="40" src="https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="bootstrap"> &nbsp
+    <img height="40" src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="javascript"> &nbsp
+    <img height="40" src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="react"> &nbsp
+</p>
 
 ## Links
 
